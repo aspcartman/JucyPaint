@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="sZxsUB" name="JucyPaint" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.JucyPaint" includeBinaryInAppConfig="1"
+              jucerVersion="3.1.0">
+  <MAINGROUP id="rDYNO3" name="JucyPaint">
+    <GROUP id="{094759C7-3774-FE87-9EC4-68AE01F90285}" name="Source">
+      <FILE id="psSFCa" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="seeece" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="MO3aMb" name="PaintComponent.cpp" compile="1" resource="0"
+            file="Source/PaintComponent.cpp"/>
+      <FILE id="B2eNeo" name="PaintComponent.h" compile="0" resource="0"
+            file="Source/PaintComponent.h"/>
+      <FILE id="O5gYJU" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraFrameworks="xdispatch">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="JucyPaint" cppLibType="libc++"
+                       customXcodeFlags="FRAMEWORK_SEARCH_PATHS = &quot;$(PROJECT_DIR)&quot;"
+                       linkTimeOptimisation="0"/>
+        <CONFIGURATION name="Release" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="0" optimisation="2" targetName="JucyPaint" cppLibType="libc++"
+                       linkTimeOptimisation="1" customXcodeFlags="FRAMEWORK_SEARCH_PATHS = &quot;$(PROJECT_DIR)&quot;"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_events" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-master/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2013 targetFolder="Builds/VisualStudio2013">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="JucyPaint" characterSet="Unicode"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="2" targetName="JucyPaint" characterSet="Unicode"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_events" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_core" path="../../Downloads/JUCE-master/modules"/>
+      </MODULEPATHS>
+    </VS2013>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+</JUCERPROJECT>
