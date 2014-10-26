@@ -67,7 +67,7 @@ public:
     /** @internal */
     void paint (Graphics&) override;
 
-private:
+protected:
     Image image;
     RectanglePlacement placement;
 

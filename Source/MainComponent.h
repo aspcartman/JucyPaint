@@ -44,8 +44,7 @@ private:
 	ScopedPointer<TextEditor>     textField;
 	ScopedPointer<PaintComponent> paintComponent;
 	ScopedPointer<uint8>          syncID;
-	ScopedPointer<AsyncUpdater>   imageToTextUpdater;
-	ScopedPointer<AsyncUpdater>   textToImageUpdater;
+	ScopedPointer<OwnedArray<TextButton>> colorButtons;
 public:
 	virtual void textEditorTextChanged(TextEditor &param) override;
 protected:

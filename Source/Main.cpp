@@ -117,6 +117,7 @@ public:
 			setColour(TextEditor::textColourId, Colours::whitesmoke);
 			setColour(Label::textColourId, Colours::whitesmoke);
 			setColour(TextButton::textColourOffId, Colours::whitesmoke);
+			setColour(TextButton::buttonColourId, Colour(0xff383838));
 
 		};
 
@@ -129,15 +130,15 @@ public:
 		{
 			if (isButtonDown)
 			{
-				g.fillAll(Colour(0xff303030));
+				g.fillAll(Colour(c).darker(0.2));
 			}
 			else if (isMouseOverButton)
 			{
-				g.fillAll(Colour(0xff404040));
+				g.fillAll(Colour(c).brighter(0.1));
 			}
 			else
 			{
-				g.fillAll(Colour(0xff383838));
+				g.fillAll(Colour(c));
 			}
 
 			g.setColour(Colour(0xff505050));

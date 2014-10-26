@@ -38,6 +38,23 @@ MainContentComponent::MainContentComponent()
 	applyButton->addListener(this);
 	addAndMakeVisible(applyButton);
 
+	colorButtons = new OwnedArray<TextButton>();
+	Colour      colors[] = {
+			Colours::white,
+			Colours::black,
+			Colours::red,
+			Colours::green,
+			Colours::blue
+	};
+	for (Colour &color : colors)
+	{
+		TextButton *button = new TextButton(String(" "));
+		button->setColour(TextButton::buttonColourId, color);
+		button->addListener(this);
+		addAndMakeVisible(button);
+		colorButtons->add(button);
+	}
+
 	textField = new TextEditor(String::empty);
 	textField->setBounds(20, 80, 200, 200);
 	textField->setFont(Font(Font::getDefaultMonospacedFontName(), 10, 0));
@@ -69,22 +86,41 @@ MainContentComponent::~MainContentComponent()
 	applyButton    = nullptr;
 	textField      = nullptr;
 	paintComponent = nullptr;
+	colorButtons   = nullptr;
 }
 
 
 void MainContentComponent::buttonClicked(Button *button)
 {
-	Image image = Image(Image::PixelFormat::ARGB, widthField->getText().getIntValue(), heightField->getText().getIntValue(), true);
-	paintComponent->setImage(image);
-	syncImageToText(image);
-	resized();
+	if (applyButton == button)
+	{
+		Image image = Image(Image::PixelFormat::ARGB, widthField->getText().getIntValue(), heightField->getText().getIntValue(), true);
+		paintComponent->setImage(image);
+		syncImageToText(image);
+		resized();
+	}
+	else
+	{
+		Colour color = ((TextButton*)button)->findColour(TextButton::buttonColourId, false);
+		paintComponent->setDrawColour(color);
+	}
 }
 
 void MainContentComponent::resized()
 {
 	Rectangle<int> imageBounds = paintComponent->getImage().getBounds();
-	paintComponent->setBounds(getWidth() - imageBounds.getWidth() - 20, 80, imageBounds.getWidth(), jmin<int>(imageBounds.getHeight(), getHeight() - 20 - 80));
-	textField->setBounds(20, 80, getWidth() - imageBounds.getWidth() - 20 - 20 - 20, getHeight() - 80 - 20);
+	paintComponent->setBounds(getWidth() - imageBounds.getWidth() - 20, 80,
+			imageBounds.getWidth(), jmin<int>(imageBounds.getHeight(), getHeight() - 20 - 80));
+	textField->setBounds(20, 80,
+			getWidth() - imageBounds.getWidth() - 20 - 20 - 20, getHeight() - 80 - 20);
+
+	int buttonSize = 20;
+	int carret = paintComponent->getX();
+	for (TextButton *button : *colorButtons)
+	{
+		button->setBounds(carret, 40, buttonSize, buttonSize);
+		carret += buttonSize + 10;
+	}
 }
 
 void MainContentComponent::textEditorTextChanged(TextEditor &editor)
@@ -102,7 +138,7 @@ void MainContentComponent::syncTextToImage(const String &text)
 		{
 			return;
 		}
-		Image *image = new Image(Image::PixelFormat::RGB, paintComponent->getWidth(), paintComponent->getHeight(), true);
+		Image *image = new Image(Image::PixelFormat::ARGB, paintComponent->getWidth(), paintComponent->getHeight(), true);
 
 		auto line    = 0;
 		auto row     = 0;
