@@ -1,0 +1,21 @@
+{
+  "id":             "juce_xdispatch",
+  "name":           "JUCE module with precompiled xdispatch",
+  "version":        "0.0.1",
+  "description":    "Classes for running an application's main event loop and sending/receiving messages, timers, etc.",
+  "website":        "http://www.juce.com/juce",
+  "license":        "GPL/Commercial",
+
+  "dependencies":   [ { "id": "juce_core",   "version": "matching" } ],
+
+  "include":        "juce_xdispatch.h",
+
+  "compile":        [ { "file": "juce_xdispatch.cpp", "target": "! xcode" },
+                      { "file": "juce_xdispatch.mm",  "target": "xcode" } ],
+
+  "msvcLibs":		["lib\xdispatch.lib","lib\dispatch.lib"],
+
+  "browse":         [ "include/xdispatch/*", "include/dispatch/*"],
+
+  "LinuxLibs":      "X11"
+}

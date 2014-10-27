@@ -22,6 +22,8 @@ public:
 	{
 	}
 
+
+
 	const String getApplicationName() override
 	{
 		return ProjectInfo::projectName;

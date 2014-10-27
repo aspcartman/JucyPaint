@@ -1101,6 +1101,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\PrecompiledHeader.h">
+      <Filter>JucyPaint\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>JucyPaint\Source</Filter>
     </ClInclude>
