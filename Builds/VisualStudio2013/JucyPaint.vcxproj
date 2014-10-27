@@ -952,9 +952,9 @@
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_graphics\juce_graphics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_gui_basics\juce_gui_basics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_gui_extra.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_xdispatch.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\PrecompiledHeader.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="..\..\Source\PaintComponent.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_core\text\juce_CharacterFunctions.h"/>
@@ -1084,6 +1084,7 @@
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_Message.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_MessageListener.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_MessageManager.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_MountedVolumeListChangeDetector.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_NotificationType.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\timers\juce_MultiTimer.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\timers\juce_Timer.h"/>
@@ -1289,6 +1290,31 @@
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_gui_extra\misc\juce_WebBrowserComponent.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_gui_extra\native\juce_mac_CarbonViewWrapperComponent.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_gui_extra.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\any.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\base.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\dispatch.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\group.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\lambda_blocks.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\lambda_dispatch.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\once.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\operation.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\pointer.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\queue.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\semaphore.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\source.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\synchronized.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\timer.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\base.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\benchmark.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\dispatch.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\group.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\object.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\once.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\queue.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\semaphore.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\source.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\time.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_xdispatch.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
@@ -1299,6 +1325,8 @@
     <None Include="..\..\JuceLibraryCode\modules\juce_graphics\juce_module_info"/>
     <None Include="..\..\JuceLibraryCode\modules\juce_gui_basics\juce_module_info"/>
     <None Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_module_info"/>
+    <None Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\dispatch"/>
+    <None Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_module_info"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc"/>

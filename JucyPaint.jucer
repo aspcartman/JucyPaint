@@ -27,12 +27,13 @@
                        linkTimeOptimisation="1" customXcodeFlags="FRAMEWORK_SEARCH_PATHS = &quot;$(PROJECT_DIR)&quot;"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_events" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_events" path="Modules"/>
+        <MODULEPATH id="juce_xdispatch" path="Modules"/>
+        <MODULEPATH id="juce_core" path="../../Documents/Development/JuceModules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <VS2013 targetFolder="Builds/VisualStudio2013">
@@ -43,14 +44,32 @@
                        isDebug="0" optimisation="2" targetName="JucyPaint" characterSet="Unicode"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_events" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Downloads/JUCE-master/modules"/>
-        <MODULEPATH id="juce_core" path="../../Downloads/JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_graphics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_events" path="Modules"/>
+        <MODULEPATH id="juce_xdispatch" path="Modules"/>
+        <MODULEPATH id="juce_core" path="../../Documents/Development/JuceModules"/>
       </MODULEPATHS>
     </VS2013>
+    <LINUX_MAKE targetFolder="Builds/Linux">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="JucyPaint"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="2"
+                       targetName="JucyPaint"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_xdispatch" path="Modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_graphics" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_events" path="Modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../Documents/Development/JuceModules"/>
+        <MODULEPATH id="juce_core" path="../../Documents/Development/JuceModules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
   </EXPORTFORMATS>
   <MODULES>
     <MODULES id="juce_core" showAllCode="1" useLocalCopy="1"/>
@@ -59,6 +78,7 @@
     <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
     <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
     <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+    <MODULES id="juce_xdispatch" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS/>
 </JUCERPROJECT>

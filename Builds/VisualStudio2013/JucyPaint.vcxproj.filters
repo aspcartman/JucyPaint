@@ -197,6 +197,18 @@
     <Filter Include="Juce Modules\juce_gui_extra\native">
       <UniqueIdentifier>{C413328B-5D81-89EE-F4F3-75752E700DE4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Juce Modules\juce_xdispatch">
+      <UniqueIdentifier>{E6FC8C06-65C2-B9B6-82C7-573E1AD4DF29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\juce_xdispatch\include">
+      <UniqueIdentifier>{92B48E6B-1F3A-DE31-E914-23EC0B360C21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\juce_xdispatch\include\xdispatch">
+      <UniqueIdentifier>{B8368C77-4E72-CB98-6B72-917527AC7A2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\juce_xdispatch\include\dispatch">
+      <UniqueIdentifier>{6531177D-F064-BB9B-FCDA-B1B3F4388E72}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Juce Library Code">
       <UniqueIdentifier>{8B4D1BAA-6DB4-CAEC-A0FA-271F354D5C61}</UniqueIdentifier>
     </Filter>
@@ -1099,11 +1111,11 @@
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_gui_extra.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_xdispatch.cpp">
+      <Filter>Juce Library Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\PrecompiledHeader.h">
-      <Filter>JucyPaint\Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>JucyPaint\Source</Filter>
     </ClInclude>
@@ -1489,6 +1501,9 @@
       <Filter>Juce Modules\juce_events\messages</Filter>
     </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_MessageManager.h">
+      <Filter>Juce Modules\juce_events\messages</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_MountedVolumeListChangeDetector.h">
       <Filter>Juce Modules\juce_events\messages</Filter>
     </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_events\messages\juce_NotificationType.h">
@@ -2106,6 +2121,81 @@
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_gui_extra.h">
       <Filter>Juce Modules\juce_gui_extra</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\any.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\base.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\dispatch.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\group.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\lambda_blocks.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\lambda_dispatch.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\once.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\operation.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\pointer.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\queue.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\semaphore.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\source.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\synchronized.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\timer.h">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\base.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\benchmark.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\dispatch.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\group.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\object.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\once.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\queue.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\semaphore.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\source.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\dispatch\time.h">
+      <Filter>Juce Modules\juce_xdispatch\include\dispatch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_xdispatch.h">
+      <Filter>Juce Modules\juce_xdispatch</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h">
       <Filter>Juce Library Code</Filter>
     </ClInclude>
@@ -2131,6 +2221,12 @@
     </None>
     <None Include="..\..\JuceLibraryCode\modules\juce_gui_extra\juce_module_info">
       <Filter>Juce Modules\juce_gui_extra</Filter>
+    </None>
+    <None Include="..\..\JuceLibraryCode\modules\juce_xdispatch\include\xdispatch\dispatch">
+      <Filter>Juce Modules\juce_xdispatch\include\xdispatch</Filter>
+    </None>
+    <None Include="..\..\JuceLibraryCode\modules\juce_xdispatch\juce_module_info">
+      <Filter>Juce Modules\juce_xdispatch</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
